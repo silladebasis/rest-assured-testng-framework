@@ -20,11 +20,11 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: API Tests
-      run: mvn clean test -DsuiteXmlFile="crudTests.xml" 
+      run: mvn clean test -DsuiteXmlFile="crudTests.xml" -q 
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.5.0
       with:
        name: allure-results
-       path: allure-result/
+       path: allure-results
     
