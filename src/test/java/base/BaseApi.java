@@ -56,7 +56,6 @@ public class BaseApi {
         requestSpecification.contentType(contentType);
         return this;
     }
-    //auth().preemptive().basic("admin","password123").
     private BaseApi setAuth(){
         requestSpecification.auth().preemptive().basic("admin","password123");
         return this;
